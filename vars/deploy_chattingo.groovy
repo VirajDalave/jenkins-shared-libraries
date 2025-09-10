@@ -3,8 +3,8 @@ def call(){
       
     sh '''
       docker login  -u ${dockerHubUser} -p ${dockerHubPass}
-      docker compose -f ./chattingo/docker-compose.prod.yml down || true
-      docker compose -f ./chattingo/docker-compose.prod.yml up -d 
+      docker compose -f .docker-compose.prod.yml down || true
+      docker compose -f .docker-compose.prod.yml up -d 
     '''
   }
   
